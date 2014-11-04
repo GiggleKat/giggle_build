@@ -33,16 +33,16 @@ except ImportError:
 
 # Config
 # set this to the default remote to use in repo
-default_rem = "TeamBliss"
+default_rem = "TeamGiggleKat"
 # set this to the default revision to use (branch/tag name)
 default_rev = "kk4.4"
 # set this to the remote that you use for projects from your team repos
-# example fetch="https://github.com/TeamBliss"
-default_team_rem = "TeamBliss"
+# example fetch="https://github.com/TeamGiggleKat"
+default_team_rem = "TeamGiggleKat"
 # this shouldn't change unless google makes changes
 local_manifest_dir = ".repo/local_manifests"
 # change this to your name on github (or equivalent hosting)
-android_team = "TeamBliss"
+android_team = "TeamGiggleKat"
 
 
 def check_repo_exists(git_data):
@@ -216,13 +216,13 @@ def parse_device_from_folder(device):
     elif len(search) == 1:
         location = search[0]
     else:
-        print("you device can't be found in Bliss Sources..")
+        print("you device can't be found in GiggleKat Sources..")
         location = parse_device_from_manifest(device)
     return location
 
 
 def parse_dependency_file(location):
-    dep_file = "bliss.dependencies"
+    dep_file = "gigglekat.dependencies"
     dep_location = '/'.join([location, dep_file])
     if not os.path.isfile(dep_location):
         print("WARNING: %s file not found" % dep_location)
